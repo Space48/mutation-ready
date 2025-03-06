@@ -1,5 +1,5 @@
 {
-  "name": "mutation-ready",
+  "name": "@space48/mutation-ready",
   "version": "1.0.0",
   "description": "A lightweight utility for detecting and handling DOM mutations",
   "main": "dist/mutation-ready.js",
@@ -45,5 +45,10 @@
   "bugs": {
     "url": "https://github.com/Space48/mutation-ready/issues"
   },
-  "homepage": "https://github.com/Space48/mutation-ready#readme"
+  "homepage": "https://github.com/Space48/mutation-ready#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "scope": "@space48"
+  }
 }

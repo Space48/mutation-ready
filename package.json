@@ -1,0 +1,54 @@
+{
+  "name": "@space48/mutation-ready",
+  "version": "1.0.0",
+  "description": "A lightweight utility for detecting and handling DOM mutations",
+  "main": "dist/mutation-ready.js",
+  "types": "dist/mutation-ready.d.ts",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "mutation-observer",
+    "dom",
+    "ready",
+    "typescript",
+    "dom-mutations",
+    "element-ready",
+    "mutation-events",
+    "dom-observer"
+  ],
+  "author": "Space48",
+  "licence": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.0.0",
+    "ts-jest": "^29.0.0"
+  },
+  "files": [
+    "dist",
+    "LICENCE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Space48/mutation-ready.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Space48/mutation-ready/issues"
+  },
+  "homepage": "https://github.com/Space48/mutation-ready#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "scope": "@space48"
+  }
+}

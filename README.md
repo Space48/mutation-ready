@@ -7,7 +7,7 @@ This utility was inspired by the MutationObserver implementation from [BigCommer
 ## Installation
 
 ```bash
-npm install mutation-ready
+npm install space48/mutation-ready
 ```
 
 ## Usage

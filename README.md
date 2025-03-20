@@ -4,6 +4,10 @@ A lightweight utility for detecting and handling DOM mutations using MutationObs
 
 This utility was inspired by the MutationObserver implementation from [BigCommerce's Guide to Checkout Customisation](https://medium.com/bigcommerce-developer-blog/the-complete-guide-to-checkout-customisation-on-bigcommerce-6b566bc36fa9#f957).
 
+## Requirements
+
+- Node.js >=16.0.0
+
 ## Installation
 
 ```bash

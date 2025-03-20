@@ -7,18 +7,18 @@ This utility was inspired by the MutationObserver implementation from [BigCommer
 ## Installation
 
 ```bash
-npm install space48/mutation-ready
+npm install @space48/mutation-ready
 ```
 
 ## Usage
 
 ```typescript
-import { mutationReady } from 'mutation-ready';
+import { mutationReady } from "@space48/mutation-ready";
 
 // Wait for an element to appear in the DOM
-mutationReady('.my-element', (element) => {
+mutationReady(".my-element", (element) => {
   // Do something with the element
-  console.log('Element is ready:', element);
+  console.log("Element is ready:", element);
 });
 ```
 

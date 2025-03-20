@@ -1,12 +1,12 @@
 {
   "name": "@space48/mutation-ready",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight utility for detecting and handling DOM mutations",
   "main": "dist/mutation-ready.js",
   "types": "dist/mutation-ready.d.ts",
   "sideEffects": false,
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=16.0.0"
   },
   "scripts": {
     "build": "tsc",

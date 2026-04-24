@@ -4,13 +4,10 @@ declare global {
   }
 }
 
-type MutationElementReady = Element & {
-  ready: boolean;
-};
-
 interface Listener {
   selector: string;
   callback: (element: Element) => void;
+  seen: WeakSet<Element>;
 }
 
 const listeners: Listener[] = [];
@@ -25,11 +22,11 @@ function check(): void {
     // Query for elements matching the specified selector
     const elements = document.querySelectorAll(listener.selector);
     for (let elementCount = 0, elementsLength = elements.length; elementCount < elementsLength; elementCount++) {
-      const element = elements[elementCount] as MutationElementReady;
+      const element = elements[elementCount];
       // Make sure the callback isn't invoked with the
       // same element more than once
-      if (!element.ready) {
-        element.ready = true;
+      if (!listener.seen.has(element)) {
+        listener.seen.add(element);
         // Invoke the callback with the element
         listener.callback.call(element, element);
       }
@@ -41,9 +38,10 @@ function ready(selector: string, callback: (element: Element) => void): void {
   listeners.push({
     selector,
     callback,
+    seen: new WeakSet(),
   });
 
-  if (!observer) {
+  if (!observer && MutationObserver) {
     // Watch for changes in the document
     observer = new MutationObserver(check);
     observer.observe(document.documentElement, {
